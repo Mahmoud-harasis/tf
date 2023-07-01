@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mahmoud ALharasis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
-        <img src="mm.jpg" alt="Profile Image" class="profile-image">
-        <h2 class="name">تالا السلامين</h2>
-        <p class="description"> انستا 357</p>
+        <img src="mahmoud.jpg" alt="Profile Image" class="profile-image">
+        <h2 class="name">Mahmoud Harasis</h2>
+        <p class="description nn">Web Devloper</p>
         <div class="social-links">
-          <a href="www.tiktok.com/@tala_salameen?_t=8daDUR5FXne&_r=1" class="social-link">توك توك</a>
-          <a href="https://www.instagram.com/tala_salameen3" class="social-link">انستا</a>
+          <a href="https://www.linkedin.com/in/mahmoud-harasis-788774221/" class="social-link">linkedin</a>
+          <a href="https://github.com/Mahmoud-harasis" class="social-link">github</a>
+          <a href="https://www.instagram.com/kx.ir/" class="social-link">instagram</a>
         </div>
       </div>
       <div class="card2">
-<p>النجاح غالبا ما يأتي للذين يجرؤون للقيام بالأعمال، ونادرا ما يأتي للخجولين الذين يخافون من النتائج</p>
+<a href="Mahmoud_harasis.pdf" download>
+  <button id="download-btn">Download CV</button>
+</a>
+<div class="progress-bar">
+  <div class="progress"></div>
+</div>
+<p class="nn">The difficulty of life is what gives meaning to success.
 
+</p>
       </div>
 </body>
+<script>
+  var progressBar = document.querySelector('.progress');
+  var downloadButton = document.getElementById('download-btn');
+  var progressBarContainer = document.querySelector('.progress-bar');
+
+  downloadButton.addEventListener('click', function() {
+    progressBar.style.width = '0%';
+    progressBarContainer.style.display = 'block'; // يظهر شريط التحميل عند الضغط على الزر
+  });
+
+  downloadButton.addEventListener('click', function() {
+    var intervalId = setInterval(function() {
+      if (progressBar.style.width === '100%') {
+        clearInterval(intervalId);
+        progressBarContainer.style.display = 'none'; // يختفي شريط التحميل عند الانتهاء من التحميل
+        return;
+      }
+      
+      progressBar.style.width = parseInt(progressBar.style.width) + 1 + '%';
+    }, 50);
+  });
+</script>
 </html>
